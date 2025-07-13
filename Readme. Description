@@ -1,0 +1,68 @@
+# 🧠 Medical Text Classifier API
+
+The Medical Text Classifier API is a comprehensive RESTful service built using FastAPI that serves a pre-trained TensorFlow-based deep learning model. It classifies clinical or healthcare-related text data into predefined medical categories by leveraging Natural Language Processing (NLP) techniques.
+
+## 📌 Project Description
+
+The Medical Text Classifier API is a robust, production-ready RESTful service developed using FastAPI, designed to expose a pre-trained TensorFlow deep learning model for classifying medical and clinical text into diagnostic categories. It enables developers, researchers, and healthcare providers to integrate smart medical classification into their systems.
+
+### 🧠 Background & Motivation
+
+In the healthcare industry, a massive volume of unstructured text data is generated daily. This data is crucial but difficult to manage without automation. The project aims to solve this by using deep learning and NLP techniques to classify such unstructured data and make it usable in real-time systems.
+
+### ⚙️ Functionality
+
+- Accept raw clinical text (e.g., "Patient reports headache and blurred vision")
+- Preprocess using saved tokenizer
+- Predict category using trained TensorFlow model
+- Return predicted class ID and confidence
+
+### 🚑 Use Cases
+
+- Department routing (Cardiology, Neurology, etc.)
+- Emergency triage automation
+- Medical research preprocessing
+- Clinical documentation support
+
+### 🧱 Architecture
+
+- FastAPI (API server)
+- TensorFlow (model serving)
+- Pickle (tokenizer loading)
+- Uvicorn (ASGI server)
+
+### 🛠️ Local Setup
+
+```bash
+git clone https://github.com/your-username/medical-text-classifier-api.git
+cd medical-text-classifier-api
+pip install -r requirements.txt
+python app.py
+```
+
+### 📦 Sample API Input
+
+```json
+{
+  "text": "Patient shows signs of chronic bronchitis and persistent cough."
+}
+```
+
+### 📤 Sample API Output
+
+```json
+{
+  "input": "Patient shows signs of chronic bronchitis and persistent cough.",
+  "predicted_class": 1,
+  "confidence": 0.9876
+}
+```
+
+### 🔮 Future Improvements
+
+- Multi-label classification
+- Add web interface
+- Deploy to cloud (Render, AWS, etc.)
+- Auth and database integration
+
+---
